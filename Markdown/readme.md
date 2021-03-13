@@ -259,8 +259,6 @@ Anchors or links, are elements that go onto another page or somewhere different 
 3. a file reference : [reference](../readme.md)
 4. an html anchor : <a href="https://google.com">Google</a>
 
-Further readings : https://www.markdownguide.org/basic-syntax/
-
 ## Horisontal rules 
 Horisontal rules can be used to seperate content, or change subjects. Horisontal rules are like the *HTML* `<hr>` element, the horisontal rule element. In Markdown their syntax is 
 different, but we can also use the hr element. Here is the syntax to use when writting these horisontal rules :
@@ -307,3 +305,10 @@ Will result in :
 > Im a blockquote
 
 > A very long message to you : Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo asperiores excepturi distinctio soluta. Repellendus reiciendis, soluta molestiae asperiores ad recusandae architecto nihil illum non aperiam debitis incidunt voluptatum, quis quam!
+
+
+
+
+
+
+Further readings : https://www.markdownguide.org/basic-syntax/
