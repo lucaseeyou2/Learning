@@ -182,7 +182,11 @@ syntax : [![placeholder text](thumbnail image source)](youtube video id) - video
 
 ## Anchors
 Anchors or links, are elements that go onto another page or somewhere different in the same page. In Markdown there are many ways of writting links. First, you could just write it as plain text, but there is actually other ways of writting links. Here are some different syntaxes that you can use to write links :
-
+```md
+1. plain text : https://www.youtube.com/watch?v=dQw4w9WgXcQ;  - Rickroll
+2. with a reference : [not a rickroll](https://www.youtube.com/watch?v=dQw4w9WgXcQ)  - Rickroll
+3. a file reference : [reference](../readme.md)  - current file
+```
 1. plain text : https://www.youtube.com/watch?v=dQw4w9WgXcQ; 
 2. with a reference : [not a rickroll](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 3. a file reference : [reference](../readme.md)
