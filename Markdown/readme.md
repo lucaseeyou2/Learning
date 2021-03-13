@@ -129,7 +129,7 @@ syntax : ```[language]
 ``&#96;
 inline : `code`
 ```
-###### Here &#96 was used to represent the symbol "`" and preventing the code block to collapse
+###### Here &#96&#59; was used to represent the symbol "`" and preventing the code block to collapse
 
 ###### JavaScript code example
 ```javascript
