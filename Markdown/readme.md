@@ -2,6 +2,16 @@
 
 ###### *inspired by this cheatsheet : https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet*, by Adam Prichard, Github
 
+## Tables of contents
+* [Introduction](https://github.com/lucaseeyou2/Learning/blob/main/Markdown/readme.md#introduction) 
+* [Headers](https://github.com/lucaseeyou2/Learning/blob/main/Markdown/readme.md#headers)
+* [Emphasis](https://github.com/lucaseeyou2/Learning/blob/main/Markdown/readme.md#emphasis)
+* [Lists](https://github.com/lucaseeyou2/Learning/blob/main/Markdown/readme.md#lists)
+* [Code](https://github.com/lucaseeyou2/Learning/blob/main/Markdown/readme.md#code)
+* [Tables](https://github.com/lucaseeyou2/Learning/blob/main/Markdown/readme.md#tables)
+* [HTML](https://github.com/lucaseeyou2/Learning/blob/main/Markdown/readme.md#html)
+* [Media](https://github.com/lucaseeyou2/Learning/blob/main/Markdown/readme.md#media)
+
 # Introduction
 Markdown is a file extension made to convert text to HTML or XHTML. It has the goal of informing when named Readme or info with the extension md and is widely used in coding. It is a fairly lightweight language, designed to be easy to read, with multiple simple functions. Markdown can also be used with *HTML* but with not all of it's functionalities. This is a guide that will cover the entirety Markdown, with all off it's content, so lets get started. Before starting to create a file, make sure that it has the extension of markdown which is `.md` or `.markdown`.
 
