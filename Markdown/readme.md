@@ -202,3 +202,5 @@ Anchors or links, are elements that go onto another page or somewhere different 
 1. plain text : https://www.youtube.com/watch?v=dQw4w9WgXcQ; 
 2. with a reference : [not a rickroll](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 3. a file reference : [reference](../readme.md)
+
+Further readings : https://www.markdownguide.org/basic-syntax/
