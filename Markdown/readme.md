@@ -112,9 +112,35 @@ Returns :
   2. same branch lol
       * child of the first 
         1. same level :)
-==            * child of second
+           * child of second
             1. yeah 
             2. same 
+
+###### In *HTML* this translates to :
+
+```html
+<ul>
+    something
+    <ul>
+        <li>child of the element</li>
+        <ol>
+            <li>ordered of the first</li>
+            <li>same branch lol</li>
+            <ul>
+                <li>child of the first</li>
+                <ol>
+                    <li>same level</li>
+                    <ul>child of the second</ul>
+                    <ol>
+                        <li>yeah</li>
+                        <li>same</li>
+                    </ol>
+                </ol>
+            </ul>
+        </ol>
+    </ul>
+</ul>
+```
 
 Here this example demonstrates lists and their different behaviours. Let's talk about ordered lists first. On the normal level, their markers are different. I will use CSS to explain this part. On a default level, the tokens are under decimal forms, like 1, 2, 3 (`list-style-type: decimal;` in css) etc. Then on the first lower level, the tokens are in lower roman (`list-style-type: lower-roman;` in css), like i, ii, iii, iv, v etc. Delving again to deeper levels, we get alphanumeric tokens (`list-style-type: lower-alpha;`), like a, b, c, d etc. And it stays 
 
@@ -123,13 +149,9 @@ Now let's talk about the unordered lists. Lists like those, have similar tokens,
 ## Code 
 Code is something that is important to Markdown files because they can indicate how to use a certain function or block of code. Code can be expressed in multiple manners. First, in an inline fashion, where the back-ticks (&#96;code here&#96;) are used to form inline code that has `this` appearence. The second form where code can appear is in multiline code using tripple back-ticks (```). Here are the syntax for each of these :
 
-```md
-syntax : ```[language]
- code
-``&#96;
-inline : `code`
-```
-###### Here &#96&#59; was used to represent the symbol "`" and preventing the code block to collapse
+    ```[language]
+    (code)
+    ```
 
 ###### JavaScript code example
 ```javascript
@@ -148,7 +170,12 @@ inline : `code`
 ###### JavaScript inline code
 `const code = "some string here";`
 
-Here you can see that these two code blocks are different. The one with the triple back-sticks is more visual because it has syntax highlighting to make it more visible and appealing to the eye, but only if a language name is precised. The inline code, with only 2 back-sticks is only for short code blocks or commands like a command in the cmd, for example. 
+Here you can see that these two code blocks are different. The one with the triple back-sticks is more visual because it has syntax highlighting to make it more visible and appealing to the eye, but only if a language name is precised. The inline code, with only 2 back-sticks is only for short code blocks or commands like a command in the cmd, for example. You can also use spaces for example to create these code blocks :
+```md
+In Markdown :
+    im a code block
+```
+    im a code block
 
 ## Tables
 A bit sooner in the guide, I have used a table to demonstrate the different emphasis that could be used with text. Now, we are going to the table itself. Unlike *HTML* that uses the `<table></table>` tag, you have to manually writte your tables in Markdown. Please note that before trying tables, that some Markdown readers will not render tables, so it may be restricted to some but most of the parsers. Here is the syntax to use when writting tables : 
@@ -170,6 +197,31 @@ result :
 | computer| 3000$  | 18%     |
 
 ###### Note that tables can also be written under the *HTML* syntax
+
+```html
+<table>
+    <tr>
+        <td>name</td>
+        <td>cost</td>
+        <td>taxes</td>
+    </tr>
+    <tr>
+        <td>bicycle</td>
+        <td>120</td>
+        <td>15%</td>
+    </tr>
+    <tr>
+        <td>house</td>
+        <td>10000$</td>
+        <td>25.5%</td>
+    </tr>
+    <tr>
+        <td>computer</td>
+        <td>3000$</td>
+        <td>18%</td>
+    </tr>
+</table>
+```
 
 ## HTML 
 HTML can be used with Markdown to create some effects, but it is limited. First, inline HTML does not work greatly with Markdown. Second, attributes such as classes and ids won't serve much because Markdown's CSS cannot be changed. I also have to mention that objects such as `<canvas></canvas>` do not have a great use in Markdown because they cannot display images or such that require Javascript or other files to intervene with it. Here are some useful tags in html, that we can use here :
@@ -198,9 +250,58 @@ Anchors or links, are elements that go onto another page or somewhere different 
 1. plain text : https://www.youtube.com/watch?v=dQw4w9WgXcQ;  - Rickroll
 2. with a reference : [not a rickroll](https://www.youtube.com/watch?v=dQw4w9WgXcQ)  - Rickroll
 3. a file reference : [reference](../readme.md)  - the readme.md at the start 
+4. an html anchor : <a href="https://google.com">Google</a> - Google
 ```
 1. plain text : https://www.youtube.com/watch?v=dQw4w9WgXcQ; 
 2. with a reference : [not a rickroll](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 3. a file reference : [reference](../readme.md)
+4. an html anchor : <a href="https://google.com">Google</a>
 
 Further readings : https://www.markdownguide.org/basic-syntax/
+
+## Horisontal rules 
+Horisontal rules can be used to seperate content, or change subjects. Horisontal rules are like the *HTML* `<hr>` element, the horisontal rule element. In Markdown their syntax is 
+different, but we can also use the hr element. Here is the syntax to use when writting these horisontal rules :
+```md
+Three or more of 
+
+***
+asterixs
+
+---
+dashes
+___
+underscores
+
+or HTML element <hr>
+```
+Will result in 
+
+Three or more of 
+
+***
+asterixs
+
+---
+dashes
+___
+underscores
+
+or HTML element <hr>
+
+## Blockquotes
+Block quotes can be used in md to amulate reply text but also to be used in sending very long messagse easily. You can use ">" this symbol followed by text that you wanted to quote in Markdown to use this feature. They can also be used with the HTML element of `<blockquote></blockquote>`. Here are a few examples of blockquotes : 
+
+```md
+> Hello ! 
+> Im a blockquote
+
+> A very long message to you : Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo asperiores excepturi distinctio soluta. Repellendus reiciendis, soluta molestiae asperiores ad recusandae architecto nihil illum non aperiam debitis incidunt voluptatum, quis quam!
+```
+
+Will result in :
+
+> Hello ! 
+> Im a blockquote
+
+> A very long message to you : Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo asperiores excepturi distinctio soluta. Repellendus reiciendis, soluta molestiae asperiores ad recusandae architecto nihil illum non aperiam debitis incidunt voluptatum, quis quam!
