@@ -5,3 +5,5 @@ A PNG files is an image. The word PNG represents the acronym for *Portable Netwo
   <img  src="./example.png" alt="example_1">
   <p align="center"><i>This is a duck in the PNG format</i></p>
 </p>
+
+Further reading : https://en.wikipedia.org/wiki/Portable_Network_Graphics
