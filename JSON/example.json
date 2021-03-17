@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/schema", 
+    "$id": "1",
+
+    "name": "value", 
+    "number" : 1234,
+    "bolean": true,
+    "array": [
+    "abc", 
+    123, 
+    true
+    ], 
+    "other_things": null,
+    
+    "something":{
+        "html_element":{
+            "id": "someelement", 
+            "class": "", 
+            "name": "p"
+        }
+    }
+}
