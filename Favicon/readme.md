@@ -26,5 +26,5 @@ This is one method of using favicons. Now to make your icon multiplatform, you c
 
 1. https://en.wikipedia.org/wiki/Favicon (consulted 7th of July 2021, 19:10 EST)
 2. https://www.w3.org/2005/10/howto-favicon (consulted 7th of July 2021, 19:10 EST)
-3. https://developer.mozilla.org/en-US/docs/Web/Manifest/icons (consulted 8th of July 13:57 EST)
-4. https://www.w3.org/TR/appmanifest/ (consulted 8th of July 14:10 EST)
+3. https://developer.mozilla.org/en-US/docs/Web/Manifest/icons (consulted 8th of July 2021 13:57 EST)
+4. https://www.w3.org/TR/appmanifest/ (consulted 8th of July 2021 14:10 EST)
