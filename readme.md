@@ -10,4 +10,4 @@ This is a set of documents aimed towards documentation on a specified language i
  
 * [PNG](https://github.com/lucaseeyou2/Learning/blob/main/PNG/readme.md)
 
-* [HTML (32)](https://github.com/lucaseeyou2/Learning/blob/main/html/guide.md)
+* [HTML (32 draft)](https://github.com/lucaseeyou2/Learning/blob/main/html/guide.md)
