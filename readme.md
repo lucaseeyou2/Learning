@@ -9,3 +9,5 @@ This is a set of documents aimed towards documentation on a specified language i
 * [Markdown](https://github.com/lucaseeyou2/Learning/blob/main/Markdown/guide.md)
  
 * [PNG](https://github.com/lucaseeyou2/Learning/blob/main/PNG/readme.md)
+
+* [HTML (32)](https://github.com/lucaseeyou2/Learning/blob/main/html/guide.md)
