@@ -52,7 +52,7 @@ Now that we know how to compose a fairly simple HTML document, we can start crea
 
 ### HTML elements 
 
-* #### `<a>` tag (anchor)
+* #### `<a>` element (anchor)
 The a tag is named the anchor tag, and represents an anchor, under the form of hyperlinks, files or others anchors<sup>16</sup>.
 
 ##### Attributes
@@ -139,59 +139,121 @@ a:-webkit-any-link:focus-visible{
     outline-width: 1px;
     outline-style: auto;
 }
-
-/* Styles given by google */
-
-a:-webkit-any-link {
-    color: -webkit-link;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-a:-webkit-any-link:active {
-    color: -webkit-activelink
-}
-
-a:-webkit-any-link:read-write {
-    cursor: text;
-}
 ``` 
-See reference<sup>32</sup> for the stylesheet.
 
+
+
+* #### `<abbr>` element 
+The `<abbr>` tag is used along with a `title` attribute to illustrate an abbreviation (acronym), or abrevieted text<sup>32</sup>. Here is the only attribute it possesses: 
+
+##### Attributes
+  * `title` : Represents an expansion of the abbreviated term, usually under human-readable text, that is shown when hovering on the element<sup>33</sup>. 
+  
+##### Default appearance 
+###### Tested on Chrome 91.0.4472.124
+```css
+/* Inspected with f12, using the console */
+abbr{
+    display: inline;
+    height: auto;
+    text-decoration: rgb(0,0,0);
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: auto;
+    width: auto;
+}
+
+abbr:focus-visible{
+    outline-color: rgb(16, 16, 16);
+    outline-style: auto;
+    outline-width: 1px;
+}
+```
+
+* #### `<acronym>` element (deprected)
+The `<acronym>` element, introduced in HTML4 is a *depracted* HTML element behaving the same way as the `<abbr>` element and is used exactly like it, to reffer to an abbreviation or acronym, and possesses the same `<title>` attribute.<sup>34</sup>
+
+##### Default appearance 
+###### Tested on Chrome 91.0.4472.124
+```css
+/* Inspected with f12, using the console */
+acronym{
+    display: inline;
+    height: auto;
+    text-decoration: rgb(0,0,0);
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: auto;
+    width: auto;
+}
+
+acronym:focus-visible{
+    outline-color: rgb(16, 16, 16);
+    outline-style: auto;
+    outline-width: 1px;
+}
+```
+
+* #### `<adress>` element 
+The `<adress>` element is used to indicate the adress, signature, and / or authorship of the current document, placed usualy on the top or bottom of the document. It also usually contains text nodes and other inline text elements such as the `<a>` tag.<sup>35</sup>
+
+  ##### Attributes
+  * The **first** attribute, `clear` is a *deprecated* attribute used to specify the position in relation with floating objects (image, canvas...), that can accept the following positionning values : *left*, *all*, *none*, and *right*<sup>36</sup>. 
+ 
+  * The **second** attribute, `nowrap` is a valueless attribute used to specify usualy to `<table>` elements that they do not require any type of wrap, and is used on the `<th>` element<sup>37</sup>.
+
+##### Default appearance 
+###### Tested on Chrome 91.0.4472.124
+```css
+/* Inspected with f12, using the console */
+address{
+    display: block;
+    font-style: italic;
+}
+
+address:focus-visible{
+    outline-color: rgb(16, 16, 16);
+    outline-style: auto;
+    outline-width: 1px;
+}
+```
+
+* #### `<applet>` element (deprecated)
 
 
 # Sources
-| Source                                                                                                    |              Consulted                 |
-| ----------------------------------------------------------------------------------------------------------|:--------------------------------------:|
-| **1.**  *https://www.investopedia.com/terms/h/html.asp*                                                   |(consulted July 08th 2021 **14:25** EST)|
-| **2.**  *https://en.wikipedia.org/wiki/HTML*                                                              |(consulted July 08th 2021 **14:26** EST)|
-| **3.**  *https://whatis.techtarget.com/fileformat/HTML-A-Web-page*                                        |(consulted July 08th 2021 **14:31** EST)|
-| **4.**  *https://www.educba.com/versions-of-html/*                                                        |(consulted July 08th 2021 **14:35** EST)|
-| **5.**  *https://en.wikipedia.org/wiki/HTML5*                                                             |(consulted July 08th 2021 **14:42** EST)|
-| **6.**  *https://www.javatpoint.com/html-tags*                                                            |(consulted July 08th 2021 **14:49** EST)|
-| **7.**  *https://www.thoughtco.com/html-singleton-tags-3468620*                                           |(consulted July 08th 2021 **14:52** EST)|
-| **8.**  *https://www.w3.org/QA/2002/04/valid-dtd-list.html*                                               |(consulted July 08th 2021 **15:07** EST)|
-| **9.**  *https://www.w3schools.com/TAGS/tag_html.asp*                                                     |(consulted July 08th 2021 **15:09** EST)|
-| **10.** *https://www.tpgi.com/using-the-html-lang-attribute/*                                             |(consulted July 08th 2021 **15:13** EST)|
-| **11.** *https://www.sitepoint.com/iso-2-letter-language-codes/*                                          |(consulted July 08th 2021 **15:14** EST)|
-| **12.** *https://www.geeksforgeeks.org/html-head-tag/*                                                    |(consulted July 08th 2021 **15:23** EST)|
-| **13.** *https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body*                                  |(consulted July 08th 2021 **15:28** EST)|
-| **14.** *https://www.techonthenet.com/html/elements/title_tag.php*                                        |(consulted July 08th 2021 **16:46** EST)|
-| **15.** *https://www.quackit.com/html_5/tags/html_p_tag.cfm*                                              |(consulted July 08th 2021 **16:51** EST)|
-| **16.** *https://www.w3docs.com/learn-html/html-a-tag.html*                                               |(consulted July 08th 2021 **18:01** EST)|
-| **17**  *https://www.geeksforgeeks.org/html-a-href-attribute/*                                            |(consulted July 11th 2021 **17:10** EST)|
-| **18**  *https://www.w3schools.com/tags/att_a_href.asp*                                                   |(consulted July 11th 2021 **17:19** EST)|
-| **19**  *https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a*                                     |(consulted July 11th 2021 **17:30** EST)|
-| **20**  *https://en.ryte.com/wiki/Anchor_Tag*                                                             |(consulted July 11th 2021 **17:40** EST)|
-| **21**  *https://www.semrush.com/blog/ultimate-hreflang-guide-dummies/*                                   |(consulted July 11th 2021 **17:52** EST)|
-| **22**  *https://css-tricks.com/the-ping-attribute-on-anchor-links/*                                      |(consulted July 11th 2021 **18:04** EST)|
-| **23**  *https://webdesign.tutsplus.com/tutorials/quick-tip-using-the-html5-download-attribute--cms-23880*|(consulted July 11th 2021 **18:14** EST)|
-| **24**  *https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy*                       |(consulted July 11th 2021 **18:24** EST)|
-| **25**  *https://www.geeksforgeeks.org/html-a-referrerpolicy-attribute*                                   |(consulted July 11th 2021 **18:30** EST)|
-| **26**  *https://www.digitalocean.com/community/tutorials/html-rel-attribute-anchor-tags*                 |(consulted July 11th 2021 **19:41** EST)|
-| **27**  *http://www.htmlcodes.ws/html-tags/a_type.cfm*                                                    |(consulted July 11th 2021 **20:06** EST)|
-| **28**  *https://www.w3resource.com/html/attributes/html-charset-attribute.php*                           |(consulted July 11th 2021 **20:12** EST)|
-| **29**  *https://www.w3schools.com/tags/att_coords.asp*                                                   |(consulted July 11th 2021 **20:18** EST)|
-| **30**  *https://www.w3resource.com/html/attributes/html-rev-attribute.php*                               |(consulted July 11th 2021 **20:25** EST)|
-| **31**  *https://www.w3schools.com/tags/att_shape.asp*                                                    |(consulted July 11th 2021 **21:03** EST)|
-| **32**  *https://gist.github.com/ambidexterich/34828a904dd97dd2a345#file-html-css-L1085*                  |(consulted July 11th 2021 **21:31** EST)|
+|                                                       Source                                               |                Consulted      |                               Source                     |           Consulted          |
+| ---------------------------------------------------------------------------------------------------------- | :----------------------------:| -------------------------------------------------------- | :---------------------------:|
+| **1.**  *https://www.investopedia.com/terms/h/html.asp*                                                    | (July 08th 2021 **14:25** EST)| **34.** *https://www.w3schools.com/tags/tag_acronym.asp* | (July 12th 2021 **14:42** EST)
+| **2.**  *https://en.wikipedia.org/wiki/HTML*                                                               | (July 08th 2021 **14:26** EST)| **35.** *https://www.w3.org/MarkUp/html3/address.html*   | (July 12th 2021 **15:10** EST)
+| **3.**  *https://whatis.techtarget.com/fileformat/HTML-A-Web-page*                                         | (July 08th 2021 **14:31** EST)| **36.** *http://help.dottoro.com/lhocxwnn.php*           | (July 12th 2021 **15:24** EST)
+| **4.**  *https://www.educba.com/versions-of-html/*                                                         | (July 08th 2021 **14:35** EST)| **37.** *http://w3schools-fa.ir/tags/att_th_nowrap.html* | (July 12th 2021 **16:23** EST)
+| **5.**  *https://en.wikipedia.org/wiki/HTML5*                                                              | (July 08th 2021 **14:42** EST)| **38.** 
+| **6.**  *https://www.javatpoint.com/html-tags*                                                             | (July 08th 2021 **14:49** EST)| **39.** 
+| **7.**  *https://www.thoughtco.com/html-singleton-tags-3468620*                                            | (July 08th 2021 **14:52** EST)| **40.** 
+| **8.**  *https://www.w3.org/QA/2002/04/valid-dtd-list.html*                                                | (July 08th 2021 **15:07** EST)| **41.** 
+| **9.**  *https://www.w3schools.com/TAGS/tag_html.asp*                                                      | (July 08th 2021 **15:09** EST)| **42.** 
+| **10.** *https://www.tpgi.com/using-the-html-lang-attribute/*                                              | (July 08th 2021 **15:13** EST)| **43.** 
+| **11.** *https://www.sitepoint.com/iso-2-letter-language-codes/*                                           | (July 08th 2021 **15:14** EST)| **44.** 
+| **12.** *https://www.geeksforgeeks.org/html-head-tag/*                                                     | (July 08th 2021 **15:23** EST)| **45.** 
+| **13.** *https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body*                                   | (July 08th 2021 **15:28** EST)| **46.** 
+| **14.** *https://www.techonthenet.com/html/elements/title_tag.php*                                         | (July 08th 2021 **16:46** EST)| **47.** 
+| **15.** *https://www.quackit.com/html_5/tags/html_p_tag.cfm*                                               | (July 08th 2021 **16:51** EST)| **48.** 
+| **16.** *https://www.w3docs.com/learn-html/html-a-tag.html*                                                | (July 08th 2021 **18:01** EST)| **49.** 
+| **17.**  *https://www.geeksforgeeks.org/html-a-href-attribute/*                                            | (July 11th 2021 **17:10** EST)| **50.** 
+| **18.**  *https://www.w3schools.com/tags/att_a_href.asp*                                                   | (July 11th 2021 **17:19** EST)| **51.** 
+| **19.**  *https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a*                                     | (July 11th 2021 **17:30** EST)| **52.** 
+| **20.**  *https://en.ryte.com/wiki/Anchor_Tag*                                                             | (July 11th 2021 **17:40** EST)| **53.** 
+| **21.**  *https://www.semrush.com/blog/ultimate-hreflang-guide-dummies/*                                   | (July 11th 2021 **17:52** EST)| **54.** 
+| **22.**  *https://css-tricks.com/the-ping-attribute-on-anchor-links/*                                      | (July 11th 2021 **18:04** EST)| **55.** 
+| **23.**  *https://webdesign.tutsplus.com/tutorials/quick-tip-using-the-html5-download-attribute--cms-23880*| (July 11th 2021 **18:14** EST)| **56.** 
+| **24.**  *https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy*                       | (July 11th 2021 **18:24** EST)| **57.** 
+| **25.**  *https://www.geeksforgeeks.org/html-a-referrerpolicy-attribute*                                   | (July 11th 2021 **18:30** EST)| **58.** 
+| **26.**  *https://www.digitalocean.com/community/tutorials/html-rel-attribute-anchor-tags*                 | (July 11th 2021 **19:41** EST)| **59.** 
+| **27.**  *http://www.htmlcodes.ws/html-tags/a_type.cfm*                                                    | (July 11th 2021 **20:06** EST)| **60.** 
+| **28.**  *https://www.w3resource.com/html/attributes/html-charset-attribute.php*                           | (July 11th 2021 **20:12** EST)| **62.** 
+| **29.**  *https://www.w3schools.com/tags/att_coords.asp*                                                   | (July 11th 2021 **20:18** EST)| **63.** 
+| **30.**  *https://www.w3resource.com/html/attributes/html-rev-attribute.php*                               | (July 11th 2021 **20:25** EST)| **64.** 
+| **31.**  *https://www.w3schools.com/tags/att_shape.asp*                                                    | (July 11th 2021 **21:03** EST)| **65.** 
+| **32.**  *https://html.com/tags/abbr/*                                                                     | (July 12th 2021 **13:42** EST)| **66.** 
+| **33.**  *https://www.w3.org/html/wiki/Elements/abbr*                                                      | (July 12th 2021 **13:47** EST)| **67.** 
