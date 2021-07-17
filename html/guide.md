@@ -219,41 +219,124 @@ address:focus-visible{
 ```
 
 * #### `<applet>` element (deprecated)
+The HTML `<applet>` element is a *deprecated* - since HTML5 - tag for embedding Java applets on a page<sup>38</sup>. *Java Applets* are defined as small Java applications or small applications in languages that compile in Java bytecode, and are running in a separate process than the browser itself -also not that Java applets are deprecated since 2017<sup>39</sup>. Here is a list of all the `<applet>` element's attributes : 
 
+##### Attributes 
+  * `code` : (mandatory) The attribute's value is a file path tied to a Java file, that runs the class where the applet is loaded. (*cannot be used with the `object` attribute*)<sup>40</sup>
+  * `object` : The object attribute is a poorly supported attribute that represents a serialized version of the applet, and thus is not commonly used.<sup>41</sup>
+  * `alt` : The `alt` attribute represents alternate text when the element is not displayed (unsupported) and has values of text.<sup>42</sup>
+  * `width` : (mandatory) Represents the width (in pixels or px) of the specified `applet` element.<sup>43</sup>
+  * `height` : (mandatory) Represents the height (in pixels or px) of the specified `applet` element.<sup>43</sup>
+  * `codebase` : (mandatory / code) : Represents the base URL that is used for the `applet` element, if no value is specified, the document URL is used.<sup>44</sup>
+  * `archive` : Represents a Jar (**J**ava **Ar**chive) that contains all the components (java) and loads faster than multiple code URLs.<sup>45</sup>
+  * `align` : Defines the alignement of the applet and can have the following values<sup>46</sup> : 
+    * `left` : aligns the element to the left of its sourrounding elements<sup>47</sup>
+    * `right` : aligns the element to the right of its sourrounding elements<sup>47</sup>
+    * `top` : aligns the element to the top of its sourrounding elements<sup>47</sup>
+    * `texttop` : alights the element to the highest text display adjacent to the applet<sup>48</sup>
+    * `middle` : aligns the bottom of the text relative to the center of the applet.<sup>47</sup>
+    * `absmiddle` : aligns the center of the applet with the middle of the largest adjacent element<sup>48</sup>
+    * `baseline` : aligns the element to the baseline of text of the sourrounding elements<sup>47</sup>
+    * `bottom` : aligns the element to the bottom of its sourrounding elements<sup>47</sup>
+    * `absbottom` : aligns the bottom of the applet element with the largest adjacent element<sup>48</sup>
+  * `datafld` : Attribute that specifies the collumn name from the data and source object that provides this data<sup>49</sup>
+  * `datasrc` : Attribute that specifies the data source that the applet is bound to<sup>50</sup>
+  * `hspace` : Attribute that supplies a value in pixels of a whitespace in the left and right of the element<sup>51</sup>
+  * `vspace` : Attribute that supplies a value in pixels of a whitespace in the top and bottom of the element<sup>51</sup>
+  * `mayscript` : Attribute responsible of allowing or not client side scripts, but since Java 1.6.0.10, the attribute is unchecked and always true<sup>52</sup>
+  * `name` : Specifies the name of the applet.<sup>53</sup>
+
+    ##### Default appearance
+```css
+applet{
+    display: inline;
+    width: auto;
+    height: auto;
+}
+
+applet:focus-visible{
+    outline-color: rgb(16, 16, 16);
+    outline-style: auto;
+    outline-width: 1px;
+}
+```
+
+* #### `<area>` element 
+The HTML `<area>` elements can create Hyperlinks from an image maps. The area element designates one or multiple areas that are areas that the user can click in order to go to another webpage<sup>54</sup>. The area element is usually nested inside a `<map>` element<sup>55</sup>. 
+
+##### Attributes 
+  * `href` : Attribute representing the actual hyperlink target of the `<area>` element it is applied to<sup>56</sup>.
+  * `coords` : Attribute that specifies values for the coordinates of the points of the clickable area<sup>57</sup>, if applied to a `shape` attribute of *rect*, the values of the coords are *x1, x2, x3, x4*, if the value of the following is *circle*, the values are *x, y, radius*, and if the value is set to poly; the values are *x1, x2, x3... xn*, and if the value is default, the coordinates will file the entire region.<sup>58</sup>
+  * `shape` : Attribute that specifies the shape of the area, accepts the following values<sup>59</sup> : 
+    * `default` : Covers the totality of the space occupied by the area 
+    * `rect` : Defines a rectangular region for the area
+    * `circle` : Defines a circular region for the area
+    * `poly` : Defines a polygonal region fo the area
+  * `alt` : Attribute that defines alternate text if the ressource were not to load<sup>60</sup>. 
+  * `download` : Attribute that will take the `href` attribute and download the ressource at the following path with the file name.<sup>61</sup>
+  * `target` : Attribute the specifies the context which the ressource opens. It has the following values :
+    * `_blank` : Opens the ressource in a new window
+    * `self` : Opens the ressource in the same frame 
+    * `_parent` : Opens the ressoure in the parent context 
+    * `_top` : Opens the ressource in the full body of the window 
+    * `framename` : Opens the ressource in the specified framename<sup>62</sup>
+  * `ping` : If specified, the `href` URL will be notified with a ping request<sup>63</sup>
+  * `rel` : Defines the relationship between the current document and the target document<sup>64</sup>, having the following values (*Same values as the `<a>` tag*) :
+    * `alternate` : Defines an alternate document of the current document.
+    * `archives` : Defines an archive, or a collection of documents or historical data 
+    * `author` : Defines additional data on the author of the document 
+    * `bookmark` : Defines a permanant bookmark link for the document
+    * `external` : Defines an external document not linked with the current document. 
+    * `feed` : Defines a feed channel for the current document 
+    * `first` : Defines that the document is the first in a series
+    * `help` : Defines that the document is a help document 
+    * `index` : Defines that the document is an index document 
+    * `last` : Defines that the document is the last in a series
+    * `liscence` : Defines that the document is a license definining license information about the current document
+    * `next` : Defines that the document the next document in a series 
+    * `nofollow` : Defines that the link is not justified by the author of the document 
+    * `norefferer` : Defines that no HTTP header should be sent when the user accesses the document 
+    * `prev` : Defines the previous document in a series
+    * `search` : Defines a document that provides a search interface 
+    * `sidebar` : Defines that the document should open in the sidebar of the current document 
+    * `tag` : Defines that a tag on the current document applies on the document 
+    * `up` : Defines a document higher in the hiearchy of the documents
+  * `reffererpolicy` : *Same values and usage in the `<a>` tag*<sup>65</sup>
+  * `hreflang` : *Same values and usage in the `<a>` tag*<sup>66</sup>
 
 # Sources
-|                                                       Source                                               |                Consulted      |                               Source                     |           Consulted          |
-| ---------------------------------------------------------------------------------------------------------- | :----------------------------:| -------------------------------------------------------- | :---------------------------:|
-| **1.**  *https://www.investopedia.com/terms/h/html.asp*                                                    | (July 08th 2021 **14:25** EST)| **34.** *https://www.w3schools.com/tags/tag_acronym.asp* | (July 12th 2021 **14:42** EST)
-| **2.**  *https://en.wikipedia.org/wiki/HTML*                                                               | (July 08th 2021 **14:26** EST)| **35.** *https://www.w3.org/MarkUp/html3/address.html*   | (July 12th 2021 **15:10** EST)
-| **3.**  *https://whatis.techtarget.com/fileformat/HTML-A-Web-page*                                         | (July 08th 2021 **14:31** EST)| **36.** *http://help.dottoro.com/lhocxwnn.php*           | (July 12th 2021 **15:24** EST)
-| **4.**  *https://www.educba.com/versions-of-html/*                                                         | (July 08th 2021 **14:35** EST)| **37.** *http://w3schools-fa.ir/tags/att_th_nowrap.html* | (July 12th 2021 **16:23** EST)
-| **5.**  *https://en.wikipedia.org/wiki/HTML5*                                                              | (July 08th 2021 **14:42** EST)| **38.** 
-| **6.**  *https://www.javatpoint.com/html-tags*                                                             | (July 08th 2021 **14:49** EST)| **39.** 
-| **7.**  *https://www.thoughtco.com/html-singleton-tags-3468620*                                            | (July 08th 2021 **14:52** EST)| **40.** 
-| **8.**  *https://www.w3.org/QA/2002/04/valid-dtd-list.html*                                                | (July 08th 2021 **15:07** EST)| **41.** 
-| **9.**  *https://www.w3schools.com/TAGS/tag_html.asp*                                                      | (July 08th 2021 **15:09** EST)| **42.** 
-| **10.** *https://www.tpgi.com/using-the-html-lang-attribute/*                                              | (July 08th 2021 **15:13** EST)| **43.** 
-| **11.** *https://www.sitepoint.com/iso-2-letter-language-codes/*                                           | (July 08th 2021 **15:14** EST)| **44.** 
-| **12.** *https://www.geeksforgeeks.org/html-head-tag/*                                                     | (July 08th 2021 **15:23** EST)| **45.** 
-| **13.** *https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body*                                   | (July 08th 2021 **15:28** EST)| **46.** 
-| **14.** *https://www.techonthenet.com/html/elements/title_tag.php*                                         | (July 08th 2021 **16:46** EST)| **47.** 
-| **15.** *https://www.quackit.com/html_5/tags/html_p_tag.cfm*                                               | (July 08th 2021 **16:51** EST)| **48.** 
-| **16.** *https://www.w3docs.com/learn-html/html-a-tag.html*                                                | (July 08th 2021 **18:01** EST)| **49.** 
-| **17.**  *https://www.geeksforgeeks.org/html-a-href-attribute/*                                            | (July 11th 2021 **17:10** EST)| **50.** 
-| **18.**  *https://www.w3schools.com/tags/att_a_href.asp*                                                   | (July 11th 2021 **17:19** EST)| **51.** 
-| **19.**  *https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a*                                     | (July 11th 2021 **17:30** EST)| **52.** 
-| **20.**  *https://en.ryte.com/wiki/Anchor_Tag*                                                             | (July 11th 2021 **17:40** EST)| **53.** 
-| **21.**  *https://www.semrush.com/blog/ultimate-hreflang-guide-dummies/*                                   | (July 11th 2021 **17:52** EST)| **54.** 
-| **22.**  *https://css-tricks.com/the-ping-attribute-on-anchor-links/*                                      | (July 11th 2021 **18:04** EST)| **55.** 
-| **23.**  *https://webdesign.tutsplus.com/tutorials/quick-tip-using-the-html5-download-attribute--cms-23880*| (July 11th 2021 **18:14** EST)| **56.** 
-| **24.**  *https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy*                       | (July 11th 2021 **18:24** EST)| **57.** 
-| **25.**  *https://www.geeksforgeeks.org/html-a-referrerpolicy-attribute*                                   | (July 11th 2021 **18:30** EST)| **58.** 
-| **26.**  *https://www.digitalocean.com/community/tutorials/html-rel-attribute-anchor-tags*                 | (July 11th 2021 **19:41** EST)| **59.** 
-| **27.**  *http://www.htmlcodes.ws/html-tags/a_type.cfm*                                                    | (July 11th 2021 **20:06** EST)| **60.** 
-| **28.**  *https://www.w3resource.com/html/attributes/html-charset-attribute.php*                           | (July 11th 2021 **20:12** EST)| **62.** 
-| **29.**  *https://www.w3schools.com/tags/att_coords.asp*                                                   | (July 11th 2021 **20:18** EST)| **63.** 
-| **30.**  *https://www.w3resource.com/html/attributes/html-rev-attribute.php*                               | (July 11th 2021 **20:25** EST)| **64.** 
-| **31.**  *https://www.w3schools.com/tags/att_shape.asp*                                                    | (July 11th 2021 **21:03** EST)| **65.** 
-| **32.**  *https://html.com/tags/abbr/*                                                                     | (July 12th 2021 **13:42** EST)| **66.** 
-| **33.**  *https://www.w3.org/html/wiki/Elements/abbr*                                                      | (July 12th 2021 **13:47** EST)| **67.** 
+|                                                       Source                                               |                Consulted      |                               Source                                                         |           Consulted          |
+| ---------------------------------------------------------------------------------------------------------- | :----------------------------:| ---------------------------------------------------------------------------------------------| :---------------------------:|
+| **1.**  *https://www.investopedia.com/terms/h/html.asp*                                                    | (July 08th 2021 **14:25** EST)| **34.** *https://www.w3schools.com/tags/tag_acronym.asp*                                     |(July 12th 2021 **14:42** EST)|
+| **2.**  *https://en.wikipedia.org/wiki/HTML*                                                               | (July 08th 2021 **14:26** EST)| **35.** *https://www.w3.org/MarkUp/html3/address.html*                                       |(July 12th 2021 **15:10** EST)|
+| **3.**  *https://whatis.techtarget.com/fileformat/HTML-A-Web-page*                                         | (July 08th 2021 **14:31** EST)| **36.** *http://help.dottoro.com/lhocxwnn.php*                                               |(July 12th 2021 **15:24** EST)|
+| **4.**  *https://www.educba.com/versions-of-html/*                                                         | (July 08th 2021 **14:35** EST)| **37.** *http://w3schools-fa.ir/tags/att_th_nowrap.html*                                     |(July 12th 2021 **16:23** EST)|
+| **5.**  *https://en.wikipedia.org/wiki/HTML5*                                                              | (July 08th 2021 **14:42** EST)| **38.** *https://html.com/tags/applet/*                                                      |(July 15th 2021 **20:35** EST)|
+| **6.**  *https://www.javatpoint.com/html-tags*                                                             | (July 08th 2021 **14:49** EST)| **39.** *https://en.wikipedia.org/wiki/Java_applet*                                          |(July 15th 2021 **20:39** EST)|
+| **7.**  *https://www.thoughtco.com/html-singleton-tags-3468620*                                            | (July 08th 2021 **14:52** EST)| **40.** *https://www.oreilly.com/library/view/learning-java/1565927184/ch20s02.html*         |(July 15th 2021 **20:42** EST)|
+| **8.**  *https://www.w3.org/QA/2002/04/valid-dtd-list.html*                                                | (July 08th 2021 **15:07** EST)| **41.** *https://www.htmlhelp.com/reference/html40/special/applet.html*                      |(July 15th 2021 **20:50** EST)|
+| **9.**  *https://www.w3schools.com/TAGS/tag_html.asp*                                                      | (July 08th 2021 **15:09** EST)| **42.** *https://www.geeksforgeeks.org/html-applet-alt-attribute/*                           |(July 16th 2021 **09:52** EST)|
+| **10.** *https://www.tpgi.com/using-the-html-lang-attribute/*                                              | (July 08th 2021 **15:13** EST)| **43.** *https://cis.upenn.edu/~bcpierce/courses/629/jdkdocs/guide/misc/applet.html*         |(July 16th 2021 **09:59** EST)|
+| **11.** *https://www.sitepoint.com/iso-2-letter-language-codes/*                                           | (July 08th 2021 **15:14** EST)| **44.** *https://docs.oracle.com/javase/7/docs/technotes/guides/jweb/applet/using_tags.html* |(July 16th 2021 **10:44** EST)|
+| **12.** *https://www.geeksforgeeks.org/html-head-tag/*                                                     | (July 08th 2021 **15:23** EST)| **45.** *https://www.linuxtopia.org/HowToGuides/HTML_tutorials/applets/_APPLET_ARCHIVE.html* |(July 16th 2021 **10:57** EST)|
+| **13.** *https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body*                                   | (July 08th 2021 **15:28** EST)| **46.** *https://www.iitk.ac.in/esc101/05Aug/tutorial/applet/appletsonly/appletTag.html*     |(July 16th 2021 **11:10** EST)|
+| **14.** *https://www.techonthenet.com/html/elements/title_tag.php*                                         | (July 08th 2021 **16:46** EST)| **47.** *https://www.linuxtopia.org/HowToGuides/HTML_tutorials/applets/_APPLET_ALIGN.html*   |(July 16th 2021 **11:15** EST)|
+| **15.** *https://www.quackit.com/html_5/tags/html_p_tag.cfm*                                               | (July 08th 2021 **16:51** EST)| **48.** *http://www.chalcedony.com/java/3.3.html*                                            |(July 17th 2021 **14:11** EST)|
+| **16.** *https://www.w3docs.com/learn-html/html-a-tag.html*                                                | (July 08th 2021 **18:01** EST)| **49.** *https://developer.mozilla.org/en-US/docs/Web/HTML/Element/applet*                   |(July 17th 2021 **14:21** EST)|
+| **17.**  *https://www.geeksforgeeks.org/html-a-href-attribute/*                                            | (July 11th 2021 **17:10** EST)| **50.** *http://noss.atlcs.net/html-tutorial/Media_Embedding/applet.htm*                     | (July 17th 2021 **14:27** EST)|
+| **18.**  *https://www.w3schools.com/tags/att_a_href.asp*                                                   | (July 11th 2021 **17:19** EST)| **51.** *https://www.oreilly.com/library/view/dynamic-html-the/1565924940/re39.html*         |(July 17th 2021 **14:30** EST)|
+| **19.**  *https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a*                                     | (July 11th 2021 **17:30** EST)| **52.** *http://help.dottoro.com/lhbkaqko.php*                                               |(July 17th 2021 **14:37** EST)|
+| **20.**  *https://en.ryte.com/wiki/Anchor_Tag*                                                             | (July 11th 2021 **17:40** EST)| **53.** *https://www.geeksforgeeks.org/html-applet-name-attribute/*                          |(July 17th 2021 **14:40** EST)|
+| **21.**  *https://www.semrush.com/blog/ultimate-hreflang-guide-dummies/*                                   | (July 11th 2021 **17:52** EST)| **54.** *https://www.w3schools.com/tags/tag_area.asp*                                        |(July 17th 2021 **14:57** EST)|
+| **22.**  *https://css-tricks.com/the-ping-attribute-on-anchor-links/*                                      | (July 11th 2021 **18:04** EST)| **55.** *https://www.htmlquick.com/reference/tags/area.html*                                 |(July 17th 2021 **14:58** EST)|
+| **23.**  *https://webdesign.tutsplus.com/tutorials/quick-tip-using-the-html5-download-attribute--cms-23880*| (July 11th 2021 **18:14** EST)| **56.** *https://www.tutorialspoint.com/html-area-href-attribute*                            |(July 17th 2021 **14:59** EST)|
+| **24.**  *https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy*                       | (July 11th 2021 **18:24** EST)| **57.** *https://html.com/attributes/area-coords/*                                           |(July 17th 2021 **15:03** EST)|
+| **25.**  *https://www.geeksforgeeks.org/html-a-referrerpolicy-attribute*                                   | (July 11th 2021 **18:30** EST)| **58.** *https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area*                     |(July 17th 2021 **15:07** EST)|
+| **26.**  *https://www.digitalocean.com/community/tutorials/html-rel-attribute-anchor-tags*                 | (July 11th 2021 **19:41** EST)| **59.** *https://www.quanzhanketang.com/tags/att_area_shape.html*                            |(July 17th 2021 **15:10** EST)|
+| **27.**  *http://www.htmlcodes.ws/html-tags/a_type.cfm*                                                    | (July 11th 2021 **20:06** EST)| **60.** *https://www.w3.org/QA/Tips/altAttribute*                                            |(July 17th 2021 **15:14** EST)|
+| **28.**  *https://www.w3resource.com/html/attributes/html-charset-attribute.php*                           | (July 11th 2021 **20:12** EST)| **61.** *https://www.dofactory.com/html/area/download*                                       |(July 17th 2021 **15:17** EST)|
+| **29.**  *https://www.w3schools.com/tags/att_coords.asp*                                                   | (July 11th 2021 **20:18** EST)| **62.** *https://www.geeksforgeeks.org/html-area-target-attribute/*                          |(July 17th 2021 **15:24** EST)|
+| **30.**  *https://www.w3resource.com/html/attributes/html-rev-attribute.php*                               | (July 11th 2021 **20:25** EST)| **63.** *https://www.wikros.com/html/attribute/area-ping-attribute.php*                      |(July 17th 2021 **15:41** EST)|
+| **31.**  *https://www.w3schools.com/tags/att_shape.asp*                                                    | (July 11th 2021 **21:03** EST)| **64.** *https://www.roseindia.net/tutorial/html/html5/HTML5AreaRel.html*                    |(July 17th 2021 **15:44** EST)|
+| **32.**  *https://html.com/tags/abbr/*                                                                     | (July 12th 2021 **13:42** EST)| **65.** *https://www.w3schools.com/tags/att_area_referrepolicy.asp*                          |(July 17th 2021 **15:57** EST)|
+| **33.**  *https://www.w3.org/html/wiki/Elements/abbr*                                                      | (July 12th 2021 **13:47** EST)| **66.** *https://www.tutorialspoint.com/html-area-hreflang-attribute*                        |(July 17th 2021 **16:01** EST)|
